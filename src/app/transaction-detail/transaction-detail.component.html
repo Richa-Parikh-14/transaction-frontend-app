@@ -1,0 +1,78 @@
+<div class="container">
+    <div *ngIf="transaction">
+    <h1>Transaction Details</h1>
+    <table>
+      <tr>
+        <td><strong>ID:</strong></td>
+        <td>{{ transaction.id }}</td>
+      </tr>
+      <tr>
+        <td><strong>Date:</strong></td>
+        <td>{{ transaction.date | date: 'dd/MM/yyyy' }}</td>
+      </tr>
+      <tr>
+        <td><strong>Comments:</strong></td>
+        <td>{{ transaction.Comments }}</td>
+      </tr>
+      <tr>
+        <td><strong>Status:</strong></td>
+        <td>{{ transaction.status }}</td>
+      </tr>
+      <tr>
+        <th colspan="2">Sender Details</th>
+      </tr>
+      <tr>
+        <td><strong>First Name:</strong></td>
+        <td>{{ transaction.sender.firstName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Last Name:</strong></td>
+        <td>{{ transaction.sender.lastName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Date of Birth:</strong></td>
+        <td>{{ transaction.sender.dateOfBirth}}</td>
+      </tr>
+      <tr>
+        <td><strong>ID Number:</strong></td>
+        <td>{{ transaction.sender.IDNumber }}</td>
+      </tr>
+      <tr>
+        <th colspan="2">Recipient Details</th>
+      </tr>
+      <tr>
+        <td><strong>First Name:</strong></td>
+        <td>{{ transaction.recipient.firstName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Last Name:</strong></td>
+        <td>{{ transaction.recipient.lastName }}</td>
+      </tr>
+      <tr>
+        <td><strong>Email:</strong></td>
+        <td>{{ transaction.recipient.email }}</td>
+      </tr>
+      <tr>
+        <td><strong>Account Number:</strong></td>
+        <td>{{ transaction.recipient.accountNumber }}</td>
+      </tr>
+      <tr>
+        <td><strong>Bank:</strong></td>
+        <td>{{ transaction.recipient.bank }}</td>
+      </tr>
+      <tr>
+        <th colspan="2">Transaction Details</th>
+      </tr>
+      <tr>
+        <td><strong>Amount:</strong></td>
+        <td>{{ transaction.Amount }}</td>
+      </tr>
+      <tr>
+        <td><strong>Currency Code:</strong></td>
+        <td>{{ transaction.CurrencyCd }}</td>
+      </tr>
+    </table>
+    <button type="button" class="btn btn-primary" (click)="backToList()">Back</button>
+    </div>
+</div>
+  
